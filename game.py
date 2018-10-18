@@ -24,7 +24,7 @@ def list_of_items(items):
     'money, a student handbook, laptop'
 
     """
-    pass
+    str(items).strip('[]')
 
 
 def print_room_items(room):
