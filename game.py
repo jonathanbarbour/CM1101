@@ -226,6 +226,7 @@ def execute_go(direction):
     moving). Otherwise, it prints "You cannot go there."
     """
     pass
+    #current room updated to new room only if exit is valid
 
 
 def execute_take(item_id):
@@ -339,4 +340,4 @@ def main():
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-    #main()
+    main()
