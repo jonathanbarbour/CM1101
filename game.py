@@ -24,7 +24,8 @@ def list_of_items(items):
     'money, a student handbook, laptop'
 
     """
-    str(items).strip('[]')
+    list_items = ", ".join([name['name'] for name in items])
+    return list_items
 
 
 def print_room_items(room):
@@ -49,7 +50,8 @@ def print_room_items(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
 
     """
-    pass
+    print("There is ", list_of_items(room["items"]), "here.")
+    print("")
 
 
 def print_inventory_items(items):
@@ -62,7 +64,8 @@ def print_inventory_items(items):
     <BLANKLINE>
 
     """
-    pass
+    list_inventory = ", ".join([name['name'] for name in items])
+    return list_items
 
 
 def print_room(room):

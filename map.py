@@ -26,7 +26,7 @@ ignore you. To the north is the reception.""",
 
     "exits":  {"north": "Reception"},
 
-    "items": []
+    "items": [item_nothing]
 }
 
 room_tutor = {
