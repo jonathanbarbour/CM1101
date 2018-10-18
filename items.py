@@ -50,10 +50,3 @@ item_handbook = {
     "description": "This student handbook explains everything. Seriously."
 }
 
-item_nothing = {
-    "id": "nothing",
-    
-    "name": "nothing",
-
-    "description": "nothing"
-}

@@ -50,8 +50,11 @@ def print_room_items(room):
     Note: <BLANKLINE> here means that doctest should expect a blank line.
 
     """
-    print("There is ", list_of_items(room["items"]), "here.")
-    print("")
+    if list_of_items(room["items"]) == "":
+        pass
+    else:
+        print("There is " + list_of_items(room["items"]) + " here.")
+        print("")
 
 
 def print_inventory_items(items):
@@ -65,7 +68,8 @@ def print_inventory_items(items):
 
     """
     list_inventory = ", ".join([name['name'] for name in items])
-    return list_items
+    print("You have", list_inventory + ".")
+    print()
 
 
 def print_room(room):
@@ -114,17 +118,13 @@ def print_room(room):
 
     Note: <BLANKLINE> here means that doctest should expect a blank line.
     """
-    # Display room name
     print()
     print(room["name"].upper())
     print()
     # Display room description
     print(room["description"])
     print()
-
-    #
-    # COMPLETE ME!
-    #
+    print_room_items(room)
 
 def exit_leads_to(exits, direction):
     """This function takes a dictionary of exits and a direction (a particular
@@ -337,5 +337,6 @@ def main():
 # '__main__' is the name of the scope in which top-level code executes.
 # See https://docs.python.org/3.4/library/__main__.html for explanation
 if __name__ == "__main__":
-    main()
-
+    import doctest
+    doctest.testmod()
+    #main()
